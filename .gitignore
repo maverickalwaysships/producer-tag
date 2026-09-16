@@ -1,0 +1,21 @@
+# ── Secrets & local config ────────────────────────────────────────────────────
+# .env holds machine-specific paths – never commit it; use .env.example instead
+.env
+
+# ── Audio resources ───────────────────────────────────────────────────────────
+# Personal producer tag audio files – keep out of version control
+audio/
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Editors ───────────────────────────────────────────────────────────────────
+.vscode/
+.cursor/
+*.swp
+*.swo
+
+# ── Shell artefacts ───────────────────────────────────────────────────────────
+*.backup.*
