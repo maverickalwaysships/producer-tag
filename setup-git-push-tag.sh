@@ -111,16 +111,17 @@ if [ $__git_exit_status -eq 0 ]; then
         esac
     done
 
-    if [ $__is_push -eq 1 ] && [ -f "$HOME/.git-sounds/push.mp3" ]; then
-        ( afplay "$HOME/.git-sounds/push.mp3" >/dev/null 2>&1 & )
+    if [ $__is_push -eq 1 ] && [ -f "__AUDIO_FILE_PLACEHOLDER__" ]; then
+        ( afplay "__AUDIO_FILE_PLACEHOLDER__" >/dev/null 2>&1 & )
     fi
 fi
 
 exit $__git_exit_status
 WRAPPER_EOF
 
-# Substitute the real git path into the wrapper
+# Substitute the real git path and audio file into the wrapper
 sed -i '' "s|__REAL_GIT_PLACEHOLDER__|${REAL_GIT}|g" "$WRAPPER_PATH"
+sed -i '' "s|__AUDIO_FILE_PLACEHOLDER__|${AUDIO_FILE}|g" "$WRAPPER_PATH"
 
 chmod +x "$WRAPPER_PATH"
 ok "Wrapper written to $WRAPPER_PATH"

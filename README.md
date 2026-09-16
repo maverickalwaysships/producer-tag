@@ -25,6 +25,22 @@ The audio plays in the background so it never blocks your workflow.
 
 ---
 
+## Verify the wrapper is installed
+
+Before expecting the tag to play, confirm the wrapper is active:
+
+```bash
+# Should show: /Users/<you>/.local/bin/git
+which git
+
+# Should print the same git version as your real git
+git --version
+```
+
+If `which git` shows `/opt/homebrew/bin/git` or `/usr/bin/git` instead, the wrapper isn't on your PATH yet — run `bash setup-git-push-tag.sh` and open a new terminal tab.
+
+---
+
 ## Quick start
 
 ```bash
