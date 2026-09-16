@@ -14,7 +14,7 @@ Every time you run `git push`, the wrapper:
 
 The audio plays in the background so it never blocks your workflow.
 
---- 
+---
 
 ## Requirements
 
